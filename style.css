@@ -31,7 +31,7 @@ body {
 div.card {
   width: 350px;
   height: auto;
-  padding: 25px 25px;
+  padding: 25px;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -40,8 +40,12 @@ div.card {
   background-color: var(--very-dark-blue-card-BG);
 }
 
-a {
+a#imganchor {
   font-size: 0;
+}
+
+div.card p {
+  color: var(--soft-blue);
 }
 
 div.card div.cube img {
@@ -50,16 +54,15 @@ div.card div.cube img {
   border-radius: 10px;
 }
 
-div.card h1,
-div.card h2,
-div.card h3 {
+div.card div.info a {
   color: var(--white);
 }
 
 div.card h1 {
   font-weight: 500;
   font-size: 1.25rem;
-  padding-top: 1rem;
+  margin-top: 18px;
+  margin-bottom: 5px;
 }
 
 div.card h2 {
@@ -67,13 +70,6 @@ div.card h2 {
   font-size: 0.8rem;
   color: var(--cyan);
   letter-spacing: 1px;
-}
-
-div.card p {
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: var(--soft-blue);
 }
 
 div.card div.info {
@@ -86,8 +82,16 @@ div.card div.info {
   padding-top: 7px;
 }
 
+div.card div.info p {
+  line-height: 1.4rem;
+}
+
 div.card div.info h1 {
   align-self: baseline;
+}
+
+div.card div.info a:hover {
+  color: var(--cyan);
 }
 
 div.card div.amount-date {
@@ -114,7 +118,8 @@ div.card div.date {
   gap: 8px;
 }
 
-div.card div.date p {
+div.card div.date,
+div.card div.artist {
   font-size: 0.9rem;
 }
 
@@ -137,10 +142,23 @@ div.card div.artist img {
   height: auto;
 }
 
-div.card div.artist p {
-  font-size: 0.9rem;
-}
-
 div.card div.artist span {
   color: var(--white);
+}
+
+div.card div.artist span:hover {
+  color: var(--cyan);
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
 }
