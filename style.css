@@ -1,0 +1,146 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--very-dark-blue-main-BG);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.card {
+  width: 350px;
+  height: auto;
+  padding: 25px 25px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue-card-BG);
+}
+
+a {
+  font-size: 0;
+}
+
+div.card div.cube img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+div.card h1,
+div.card h2,
+div.card h3 {
+  color: var(--white);
+}
+
+div.card h1 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding-top: 1rem;
+}
+
+div.card h2 {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--cyan);
+  letter-spacing: 1px;
+}
+
+div.card p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--soft-blue);
+}
+
+div.card div.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding-bottom: 5px;
+  padding-top: 7px;
+}
+
+div.card div.info h1 {
+  align-self: baseline;
+}
+
+div.card div.amount-date {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 15px;
+}
+
+div.card div.amount {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 7px;
+}
+
+div.card div.date {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+div.card div.date p {
+  font-size: 0.9rem;
+}
+
+div.card div.artist {
+  align-self: stretch;
+  border-top: 1px solid var(--very-dark-blue-line);
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+div.card div.artist img {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 11%;
+  height: auto;
+}
+
+div.card div.artist p {
+  font-size: 0.9rem;
+}
+
+div.card div.artist span {
+  color: var(--white);
+}
