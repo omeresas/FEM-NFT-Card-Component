@@ -5,6 +5,7 @@
   --very-dark-blue-card-BG: hsl(216, 50%, 16%);
   --very-dark-blue-line: hsl(215, 32%, 27%);
   --white: hsl(0, 0%, 100%);
+  --transition-duration: 0.4s;
 }
 
 * {
@@ -52,17 +53,25 @@ div.card div.cube img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  opacity: 1;
+  transition: opacity var(--transition-duration) ease-out;
 }
 
-div.card div.info a {
+div.card div.cube:hover img {
+  opacity: 0.3;
+}
+
+div.card div.info h1 a {
   color: var(--white);
-}
-
-div.card h1 {
   font-weight: 500;
   font-size: 1.25rem;
   margin-top: 18px;
   margin-bottom: 5px;
+  transition: color var(--transition-duration) ease-out;
+}
+
+div.card div.info h1 a:hover {
+  color: var(--cyan);
 }
 
 div.card h2 {
@@ -88,10 +97,6 @@ div.card div.info p {
 
 div.card div.info h1 {
   align-self: baseline;
-}
-
-div.card div.info a:hover {
-  color: var(--cyan);
 }
 
 div.card div.amount-date {
@@ -144,6 +149,7 @@ div.card div.artist img {
 
 div.card div.artist span {
   color: var(--white);
+  transition: color var(--transition-duration) ease-out;
 }
 
 div.card div.artist span:hover {
@@ -161,33 +167,36 @@ div.cube {
   position: relative;
 }
 
-div.cube:hover::before {
-  content: "";
+div.cube div.overlay-color {
   position: absolute;
   top: 0px;
   bottom: 0px;
   right: 0px;
   left: 0px;
-  opacity: 1;
   background-color: var(--cyan);
   border-radius: 10px;
-  transition: all 1s ease-in;
+  opacity: 0;
+  transition: all var(--transition-duration) ease-out;
 }
 
-div.cube:hover::after {
-  content: "";
+div.cube div.overlay-icon {
   position: absolute;
   top: 0px;
   bottom: 0px;
   right: 0px;
   left: 0px;
-  opacity: 1;
+  opacity: 0;
   background-image: url(./images/icon-view.svg);
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 1;
+  transition: all var(--transition-duration) ease-out;
 }
 
-div.cube:hover img {
-  opacity: 0.5;
+div.cube:hover div.overlay-color {
+  opacity: 0.8;
+}
+
+div.cube:hover div.overlay-icon {
+  opacity: 1;
 }
