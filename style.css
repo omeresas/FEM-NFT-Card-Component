@@ -5,7 +5,7 @@
   --very-dark-blue-card-BG: hsl(216, 50%, 16%);
   --very-dark-blue-line: hsl(215, 32%, 27%);
   --white: hsl(0, 0%, 100%);
-  --transition-duration: 0.4s;
+  --transition-duration: 0.2s;
 }
 
 * {
@@ -194,9 +194,11 @@ div.cube div.overlay-icon {
 }
 
 div.cube:hover div.overlay-color {
+  transition: all var(--transition-duration) ease-out;
   opacity: 0.8;
 }
 
 div.cube:hover div.overlay-icon {
+  transition: all var(--transition-duration) ease-out;
   opacity: 1;
 }
