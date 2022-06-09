@@ -5,7 +5,7 @@ This is my solution to the [NFT preview card component challenge on Frontend Men
 ### GIF
 
 <p> 
-<img src="preview.gif" alt="drawing" width=400"/>
+<img src="preview.gif" alt="drawing" width="400""/>
 </p>
 
 ### Links
