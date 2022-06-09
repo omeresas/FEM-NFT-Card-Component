@@ -176,7 +176,7 @@ div.cube div.overlay-color {
   background-color: var(--cyan);
   border-radius: 10px;
   opacity: 0;
-  transition: all var(--transition-duration) ease-out;
+  transition: opacity var(--transition-duration) ease-out;
 }
 
 div.cube div.overlay-icon {
@@ -190,15 +190,13 @@ div.cube div.overlay-icon {
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 1;
-  transition: all var(--transition-duration) ease-out;
+  transition: opacity var(--transition-duration) ease-out;
 }
 
 div.cube:hover div.overlay-color {
-  transition: all var(--transition-duration) ease-out;
   opacity: 0.8;
 }
 
 div.cube:hover div.overlay-icon {
-  transition: all var(--transition-duration) ease-out;
   opacity: 1;
 }
