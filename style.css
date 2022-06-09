@@ -40,8 +40,8 @@ div.card {
   background-color: var(--very-dark-blue-card-BG);
 }
 
-a#imganchor {
-  font-size: 0;
+div.card > a:first-child {
+  font-size: 0px;
 }
 
 div.card p {
@@ -150,15 +150,44 @@ div.card div.artist span:hover {
   color: var(--cyan);
 }
 
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
+a:link,
+a:visited,
+a:hover,
 a:active {
   text-decoration: none;
+}
+
+div.cube {
+  position: relative;
+}
+
+div.cube:hover::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  opacity: 1;
+  background-color: var(--cyan);
+  border-radius: 10px;
+  transition: all 1s ease-in;
+}
+
+div.cube:hover::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  opacity: 1;
+  background-image: url(./images/icon-view.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+div.cube:hover img {
+  opacity: 0.5;
 }
