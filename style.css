@@ -185,6 +185,7 @@ body {
 }
 
 .cube .icon {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -195,5 +196,6 @@ body {
 }
 
 .cube:hover .icon {
+  display: block;
   opacity: 1;
 }
